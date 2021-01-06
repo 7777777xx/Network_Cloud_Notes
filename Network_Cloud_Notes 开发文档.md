@@ -1,4 +1,4 @@
-# Network_Cloud_Notes 开发文档
+#  开发文档
 
 ## 项目信息
 
@@ -6,7 +6,7 @@
 项目名称:网络云笔记
 项目时间:2021.01.02-2021.01.
 项目人员:七xx
-项目描述:
+项目描述:该项目是学习Python过程中以实现在线笔记为目的而设计，使用的是Python中的Django框架，采用的是MTV模式开发的web项目，目前由用户模块，笔记模块组成，已实现登陆注册退出 ，查看笔记列表，创建新笔记，修改笔记，删除笔记等功能。
 
 ```
 
@@ -15,7 +15,7 @@
 ## 开发规范
 
 ```
-
+开发环境:Windows 10 + Python 3.8 + Mysql 8.0.22 + Pycharm + Git
 ```
 
 
@@ -77,7 +77,7 @@ class Note(models.Model):
     content = models.TextField('内容')
     created_time = models.DateTimeField('创建时间', auto_now_add=True)
     updated_time = models.DateTimeField('更新时间', auto_now=True)
-	user = models.ForeignKey(User, on_delete=models.CASCADE)
+	user = models.IntegerField(User, on_delete=models.CASCADE)
 ```
 
 |    字段名    | 字段类型  |   作用   | 备注 |
@@ -86,7 +86,7 @@ class Note(models.Model):
 |   content    |   text    |   内容   |      |
 | created_time | datetime  | 创建时间 |      |
 | updated_time | datetime  | 修改时间 |      |
-|   user_id    |    int    |  用户id  | 外键 |
+|   user_id    |    int    |  用户id  |      |
 
 ## 设计规范
 
