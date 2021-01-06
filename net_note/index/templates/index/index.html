@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    {% if  uname  == ' ' %}
+    <p>欢迎使用网络云笔记</p>
+    <p>
+        <a href="/user/login">登录</a>
+        <a href="/user/reg">注册</a>
+    </p>
+    {% else %}
+    <p>
+        欢迎: {{ uname }}
+        <a href="/user/logout">退出登录</a>
+    </p>
+    <p>
+        <a href="/note/">进入我的笔记</a>
+    </p>
+
+    {% endif %}
+</body>
+</html>
